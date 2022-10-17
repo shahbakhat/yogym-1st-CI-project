@@ -1,0 +1,861 @@
+/*
+primary color #0d56d9    rgb(13, 86, 217)
+secondary color #009AFC    rgb(0, 154, 252)
+other pallete colors #00CFEB   rgb(0, 207, 235)
+#6BFBCE     rgb(107, 251, 206)
+
+*/
+
+@keyframes slideLeft{
+    0% {
+        opacity:0;
+        transform:translateX(-15rem)
+}
+80% {
+    
+    transform:translateX(2rem)
+}
+100% {
+    opacity:1;
+    translate:(0)
+}
+}
+@keyframes slideRight{
+    0% {
+        opacity:0;
+        transform:translateX(15rem)
+}
+80% {
+    
+    transform:translateX(-2rem)
+}
+100% {
+    opacity:1;
+    translate:(0)
+}
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #777;
+    padding:3rem;
+}
+
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+min-height:95vh;
+   background-image:linear-gradient(to right bottom, rgb(13, 86, 217,0.9),rgb(0, 154, 252,0.9)),url(assets/css/img/hero.jpg);
+   background-position:top;
+   background-size:cover;
+position: relative;
+background-repeat: no-repeat;
+clip-path: polygon(0 100%, 0 0, 100% 0, 100% 95%);
+z-index:1;
+
+}
+
+
+#header-text__box{
+    position: relative;
+
+display: flex;
+
+ justify-content:center;
+ text-align: center;
+flex-direction: column;
+  
+    line-height:8.5rem;
+    text-align: center;
+    
+}
+
+.logo-icon{
+    position:absolute;
+    top:-25px;
+    left:-10px;
+    height:20rem;
+    animation:slideRight 2s ease-out .3s ;
+}
+.logo-heading{
+    position: absolute;
+
+}
+.primary-main{
+    font-size:13rem;
+    display:block;
+    font-weight:400;
+    letter-spacing:3rem;
+    text-transform:uppercase;
+    color:#fff;
+    animation:slideLeft 1.5s ease-out .3s ;
+   
+}
+.primary-sub{
+    display:block;
+    letter-spacing:.49rem;
+    text-transform:uppercase;
+    font-weight: 400;
+    color:#fff;
+    animation:slideRight 1.5s ease-out .3s ;
+    
+}
+.big-btn{
+   
+  margin-top:5rem;
+
+    display:inline-block;
+    text-align: center;
+}
+.btn-animated,.btn-animated:link,.btn-animated:hover{
+    background-color: #fff;
+height: 8rem;
+width: 20rem;
+    color:  #777;
+    border-radius:100px;
+    display:inline-block;
+    font-size: 1.5rem;
+    border:none;
+    cursor:pointer;
+    text-decoration:none;
+    text-transform: uppercase;
+    transition:all .2s;
+
+
+   
+}
+.btn-animated:hover{ 
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5); 
+}
+.btn-animated:active, .btn-animated:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.about{
+        background-color: #f7f7f7;
+        padding:25rem 0;
+        text-align: center;
+        transform:translateY(-20rem);
+       
+      
+
+    }
+
+
+    .big-heading{
+        background-image:linear-gradient(to right bottom, rgb(  88,   0, 255,0.8),rgba(0,215,255,0.8) );
+        color:transparent;
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 700;
+        letter-spacing:.5rem;
+        text-transform: uppercase;
+        -webkit-background-clip: text;
+        width:100%;
+        margin-bottom: 2rem;
+            }
+
+
+    .about-section{
+        text-align: center;
+   
+        margin-top:4rem;
+    }
+
+    .about-content__box{
+        
+       display: flex;
+       flex-direction:row;
+       align-items: center;
+justify-content: space-between;
+flex-wrap: wrap;
+      background-image:linear-gradient(to right bottom,rgb(13, 86, 217,0.8),rgb(0, 154, 252,0.8));
+     
+    }
+    .about-content{
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: space-between;
+        color:#fff;
+        border-radius:6px;
+padding: 3rem;
+flex-basis: 50%;
+ }
+ .content-main{
+    text-transform: uppercase;
+    font-size:2rem;
+    padding: 3rem;
+    font-size:3rem;
+    font-weight:400;
+    letter-spacing: .5rem;
+    text-align: center;
+   
+   }
+   .content-paragraph{
+    text-transform: uppercase;
+    line-height: 3;
+    font-size:1.4rem;
+    letter-spacing:.1rem;
+    font-weight:300;
+    
+  
+   }
+
+   
+   
+  
+  .features-section{
+  
+    min-height:40vh;
+    
+margin-top: 2rem;
+
+  
+    }
+    .feature-section__box{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding:3rem;
+        background-image:linear-gradient(to right , rgb(13, 86, 217,0.8),rgb(0, 154, 252,0.8));
+   max-height:auto;
+    
+        
+   
+    }
+    .feature-card__heading{
+      
+        font-size:2.3rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing:.1rem;
+        text-align: center;
+
+    }
+   .feature-section__card{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    font-size:1rem;
+    font-weight:400;
+    color:#303030;
+    text-transform: uppercase;
+    background-color:#fff;
+   padding:4rem;
+    line-height:2rem;
+    letter-spacing:.1rem;
+    border-radius: 4px;
+    border: 2px solid #0d56d9;
+    margin-bottom:2rem;
+
+   }
+   .feature-card1 ,.feature-card2{
+    flex-basis: 50%;
+   }
+  
+   .feature-card3, .feature-card4{
+    flex-basis:50%;
+   }
+   .feature-section__card:hover{
+   transform:translateY(-15px);
+ cursor:pointer;
+   transition:all .3s ease-out;
+   }
+
+
+
+
+    .plans-section{
+      
+      
+      margin-top:3rem;
+        
+    }
+.plans-card__box{
+    
+    padding:6rem;
+    background-color:rgb(13, 86, 217,0.9);
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+     
+}
+.plans-card{
+ 
+    display:inline-block;
+    height:58rem;
+   width:35rem;
+   margin-top:3rem;
+}
+
+.plans-card__content{
+   display:flex;
+   flex-direction: column;
+   align-items: center;
+    border-radius:10px;
+    height:100%;
+    width: 100%;
+
+ 
+}
+.plans-card__text{
+    height:58rem;
+  
+    font-weight:300;
+    text-align:center;
+    font-size:3rem;
+    line-height:3rem;
+    text-transform: uppercase;
+   padding:4.5rem;
+   color:#fff;
+  font-size:1rem;
+  outline: none;
+   
+
+}
+
+.plans-card__text:hover 
+{   background-image:linear-gradient(to right bottom, rgb(13, 86, 217),rgb(107, 251, 206)) ;
+    text-align:center;
+    border-radius:3px;
+    outline:none;
+    font-weight:500;
+    text-align:center;
+    font-size:3rem;
+    line-height:3rem;
+    text-transform: uppercase;
+   padding:4.5rem;
+   color:#fff;
+   visibility:visible;
+   cursor:pointer;
+   transition:all .3s;
+  
+   
+}
+
+.plans-card h4{
+font-size: 7rem;
+font-weight: 100;
+}
+  
+
+
+.plans-card1{
+    background-image:linear-gradient(to bottom, rgb(0,0,0,1),rgba(255, 255, 255, 0.7)),url(assets/css/img/yoga-card.jpg);
+    background-size: cover;
+    background-position:top;
+   
+}
+
+.plans-card2{
+    background-image:linear-gradient(to right bottom, rgb(0,0,0),rgba(255, 255, 255, 0.8)),url(assets/css/img/gym-card.jpg);
+    background-position:top;
+ background-size: cover;
+
+}
+
+
+.plans-card3{
+    background-image:linear-gradient(to right bottom, rgb(0,0,0),rgba(255, 255, 255, 0.8)),url(assets/css/img/yoga-gym.jpg);
+    background-position:top;
+    background-size: cover;
+ 
+}
+
+
+.plans-card__main {
+    font-size:6rem;
+    font-weight:500;
+   color:#fff;
+   letter-spacing:.5rem;
+   line-height:8rem;
+   text-align: center;
+   text-transform: uppercase;
+   display:inline-block;
+  
+
+}
+
+
+
+#plans-price{
+    font-size:7rem;
+    font-weight:100;
+    
+    margin-top:2rem;
+    line-height:6rem;
+}
+
+
+
+.plans-card p{
+    font-size:1.5rem;
+    text-transform: capitalize;
+    margin-top: 2rem;
+}
+
+
+#plan-cto{
+    display:block;
+    background-color:#fff;
+    color:#303030;
+    font-size:2rem;
+    border-radius:100px;
+    padding:1rem;
+    text-decoration: none;
+    margin-top:3rem;
+
+   
+
+}
+#plan-cto:hover{
+    background-color: #0d56d9;
+    color:#fff;
+    
+    display:block;
+    transition: all .4s ease;
+    font-size:2rem;
+    border-radius:100px;
+    padding:1rem;
+    text-decoration: none;
+    margin-top:3rem;
+}
+
+.story-section{
+      
+   
+    margin-top: 3rem;
+    text-align: center;
+
+   
+}
+.story-section__box{
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+  
+}
+
+.story{
+padding: 3rem;
+   background-color:rgb(0, 207, 235,0.1);
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.story-image{
+  background-color:rgb(0, 207, 235,0.3);
+   border: 6px solid #0d56d9;
+   padding: 2rem;
+   height:20rem;
+   width:20rem;
+    border-radius:50%;
+
+
+  
+
+}
+.story-quote{
+    font-size:2.5rem;
+  letter-spacing:.2rem;
+  line-height:3.5rem;
+    text-align: center;
+    color:#303030;
+  
+}
+
+.story-name{
+  outline:none;
+   font-size: 1rem;
+   font-weight: 300;
+   text-transform: uppercase;
+   color: #fff;
+   
+   background-color:rgb(13,  86, 217,1);
+   letter-spacing:1rem;
+
+
+}
+
+   
+
+
+.story-btn:visited, .story-btn:visited,.story-btn:link{
+   
+    text-decoration: none;
+    text-transform:uppercase;
+    color: #303030;
+    font-size:1.5rem;
+
+    text-align: center;
+    padding: 1.5rem;
+    border-radius:100px;
+    border: 1px solid #0d56d9;
+    background-color:#fff;
+    
+}
+.story-btn:hover{
+    background-color: #0d56d9;
+    color:#fff;
+   
+    transition: all .3s ease;
+    font-size:1.7rem;
+    border-radius:100px;
+   
+    text-decoration: none;
+   
+}
+
+.signup-section{
+    margin-top: 8rem;
+   
+    
+   
+}
+.signup-section__box{
+    background-color:rgb(13,  86, 217,0.9);
+   
+    padding:6rem
+}
+
+
+.signup-form__box{
+    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 50%, transparent 50%), url(assets/css/img/signup-form.jpg);
+    background-size:cover;
+    background-position: top;
+    background-repeat:no-repeat;
+    height: 100vh;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  
+    
+    
+
+
+}
+
+.form-box{
+    padding: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:space-between;
+    
+}
+
+.form-input{
+    display:block;
+    border-radius:5px;
+    width:150%;
+    display: block;
+    font-size: 1.5rem;
+    font-family:inherit;
+    padding: 1.5rem 2rem;
+    border-radius:2px;
+    color:rgba(255, 255, 255, 0.5);
+    border-bottom: 3px solid transparent;
+    transition: all .3s;
+    border: none;
+    outline: none;box-shadow: 0 2rem 1rem rgb(0,0,0,0.1);
+        
+}
+.form-input:focus{
+    outline:none;
+    box-shadow: 0 1rem 2rem rgb(0,0,0,0.2);
+    border-bottom: 3px solid #0d56d9;
+    transition: all .3s;
+}
+
+.form-input:not(:last-child){
+    margin-bottom:2rem;
+   
+}
+
+.form-label{
+    font-size: 1.2rem;
+    font-weight:700;
+    margin-left:2rem;
+    margin-top: .7rem;
+    display:block;
+    transition: all .3s;
+}
+
+
+.form-btn a {
+text-decoration: none;
+text-align: center;
+color: #0d56d9;
+background-color: #f7f7f7;
+font-size: 2rem;
+padding: 1rem;
+width: 5rem;
+display: block;
+height: 5rem;
+width: 16rem;
+border-radius: 100px;
+box-shadow: 0 2rem 1rem rgb(0,0,0,0.1);
+  
+}
+    
+
+.form-btn a:hover{
+    background-color: #0d56d9;
+    color:#fff;
+    transition: all .3s ease;
+    font-size:2rem;
+    border-radius:100px;
+    text-decoration: none;
+    
+   
+}
+
+.form-btns{
+    margin-top: 2rem;
+  
+
+}
+.footer {
+    height: 300px;
+    width: 100%;
+    background-color: #333333;
+    position:relative;
+    bottom: 0;
+    margin-top: 2rem;
+}
+
+p.copyright {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    color: #fff;
+    line-height: 40px;
+    font-size: 3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:950px){
+
+    .primary-main{
+        font-size:8rem;
+    }
+    .primary-sub{
+        font-size:1.5rem;
+        font-weight:300;
+    }
+    .big-heading{
+        font-size:1.9rem;
+        font-weight:700;
+        
+    }
+    .plans-card__box{
+
+    flex-direction: column;
+    flex-wrap:wrap;
+    }
+   
+    .plans-card{
+align-items:center;
+justify-content: center;
+    }
+    .signup-form__box{
+        background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.9) 1000%, transparent 50%), url(assets/css/img/signup-form.jpg);
+        background-size:cover;
+        background-position: top;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+        display:flex;
+        flex-direction: column;
+        
+    }  
+    .form-input{
+       
+        height: 50%;
+        width:200%;
+    }  
+    .form-btns{
+        margin-top: 8rem;
+    }
+}
+
+
+@media screen and (max-width:720px){
+
+    .primary-main{
+        font-size:8rem;
+    }
+    .primary-sub{
+        font-size:1.5rem;
+        font-weight:300;
+    }
+    .big-heading{
+        font-size:1rem;
+        font-weight:700;
+        
+    }
+
+.about-content{
+    flex-basis: 100%;
+}
+.feature-card1, .feature-card4{
+    flex-basis:100%;
+}
+    .plans-card__box{
+        align-items:center;
+        justify-content:center;
+    }
+    .signup-form__box{
+        background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.9) 1000%, transparent 50%), url(assets/css/img/signup-form.jpg);
+        background-size:cover;
+        background-position: top;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+        display:flex;
+        flex-direction: column;
+        
+    }    
+}
+
+@media screen and (max-width:640px){
+
+    .primary-main{
+        font-size:7rem;
+    }
+    .primary-sub{
+        font-size:1.2rem;
+        font-weight:300;
+    }
+    #about-heading{
+        font-size:1rem;
+        font-weight:700;
+    }
+    .big-heading{
+        font-size:2rem;
+        font-weight:700;
+        
+    }
+
+.about-content{
+    flex-basis: 100%;
+}
+.feature-section__card{
+    flex-basis: 100%;
+}
+    .plans-card__box{
+        align-items:center;
+        justify-content:center;
+    }
+    .signup-form__box{
+        background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.9) 1000%, transparent 50%), url(assets/css/img/signup-form.jpg);
+        background-size:cover;
+        background-position: top;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+        display:flex;
+        flex-direction: column;
+        
+    }  
+    .form-input{
+       width: 150%;
+    }  
+}
+
+@media screen and (max-width:480px){
+
+    .primary-main{
+        font-size:5rem;
+        margin-left: 5rem;
+    }
+    .primary-sub{
+        font-size:1rem;
+        font-weight:300;
+    }
+    #about-heading{
+        font-size:1rem;
+        font-weight:700;
+    }
+    .big-heading{
+        font-size:1.5rem;
+        font-weight:700;
+        
+    }
+
+.about-content{
+    flex-basis: 100%;
+    justify-content:space-around;
+}
+.content-main{
+    font-size:2rem;
+}
+.content-paragraph{
+    font-size: 1.2rem;
+
+}
+.about-content2{
+margin-top: -7rem;
+}
+
+    .plans-card__box{
+     
+        align-items:center;
+        justify-content:space-around;
+    }
+
+    .plans-card{
+        margin-left:-2rem;
+    }
+    .signup-form__box{
+        background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.9) 1000%, transparent 50%), url(assets/css/img/signup-form.jpg);
+        background-size:cover;
+        background-position: top;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+        display:flex;
+        flex-direction: column;
+        height: auto;
+    }  
+    .form-input{
+       width: 100%;
+    }  
+}
+
+
+
